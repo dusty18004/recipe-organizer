@@ -1,0 +1,16 @@
+package recipe_organizer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ingredient {
+	private String name;
+	private double quantity;
+	private String unit;  // gram, cups, etc.
+	
+	public Ingredient(String name, double quantity, String unit) {
+		this.name = name;
+		this.quantity = quantity;
+		this.unit = unit;
+	}
+}

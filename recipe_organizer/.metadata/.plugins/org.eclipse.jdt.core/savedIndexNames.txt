@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Anna\Documents\recipe-organizer\recipe_organizer\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3697447155.index
+1951297957.index
