@@ -49,7 +49,7 @@ public class Recipe {
 	
 	public Recipe scaleTo(int newServings) {
 		Recipe newRecipe = new Recipe(name, newServings);
-		double factor = newServings / servings;
+		double factor =  (double) newServings / servings;
 		for (Ingredient ingredient : ingredients) {
 			Ingredient changed = ingredient.scale(factor);
 			newRecipe.addIngredient(changed);
@@ -60,5 +60,10 @@ public class Recipe {
 		}
 		
 		return newRecipe;
+	}
+	
+	// added to run JUnit tests
+	public List<Ingredient> getIngredients() {
+	    return new ArrayList<>(ingredients);
 	}
 }
