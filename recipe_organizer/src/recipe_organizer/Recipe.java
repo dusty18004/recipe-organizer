@@ -9,7 +9,7 @@ public class Recipe {
 	private List<Ingredient> ingredients;
 	private List<String> instructions;
 	
-	public Recipe(String name, int servings ) {
+	public Recipe(String name, int servings) {
 		this.name = name;
 		this.servings = servings;
 		this.ingredients = new ArrayList<>();
@@ -45,5 +45,20 @@ public class Recipe {
 	    for (int i = 0; i < instructions.size(); i++) {
 	        System.out.println((i + 1) + ". " + instructions.get(i));
 	    }
+	}
+	
+	public Recipe scaleTo(int newServings) {
+		Recipe newRecipe = new Recipe(name, newServings);
+		double factor = newServings / servings;
+		for (Ingredient ingredient : ingredients) {
+			Ingredient changed = ingredient.scale(factor);
+			newRecipe.addIngredient(changed);
+		}
+		
+		for (String instruction : instructions) {
+			newRecipe.addInstruction(instruction);
+		}
+		
+		return newRecipe;
 	}
 }

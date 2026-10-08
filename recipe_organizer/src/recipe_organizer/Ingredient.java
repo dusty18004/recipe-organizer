@@ -28,4 +28,9 @@ public class Ingredient {
     public String toString() {
         return quantity + " " + unit + " " + name;
     }
+    
+    public Ingredient scale(double factor) {
+    	double newQuantity = quantity * factor;
+    	return new Ingredient(name, newQuantity, unit);
+    }
 }

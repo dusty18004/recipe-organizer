@@ -12,7 +12,11 @@ public class Main {
 		cookies.addInstruction("Preheat oven to 350 degrees F.");
 		cookies.addInstruction("Mix together all dry ingredients.");
 		
+		Recipe doubled = cookies.scaleTo(24);		
+		
 		cookies.printRecipe();
+		
+		doubled.printRecipe();
 	}
 
 }
